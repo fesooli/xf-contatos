@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{61ED399D-AD72-4C7E-A4DD-6EDB16098611}|Default">
+  <MonoDevelop.Ide.ItemProperties.XF.Contatos.Android PreferredExecutionTarget="Android.Android_Accelerated_Nougat" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XF.Contatos/XF.Contatos.Android/AppResources/GeoLocation.cs">
+    <Files>
+      <File FileName="XF.Contatos/XF.Contatos/Views/DetalhesView.xaml.cs" Line="28" Column="4" />
+      <File FileName="XF.Contatos/XF.Contatos.Android/AppResources/GeoLocation.cs" Line="27" Column="39" />
+      <File FileName="XF.Contatos/XF.Contatos/Views/DetalhesView.xaml" Line="12" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
