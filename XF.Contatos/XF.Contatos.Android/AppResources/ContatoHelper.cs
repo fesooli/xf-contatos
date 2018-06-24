@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.Telephony;
 using Xamarin.Contacts;
 using Xamarin.Forms;
@@ -86,12 +88,22 @@ namespace XF.Contatos.Droid.AppResources
 
             foreach (var cont in contactList)
             {
-                contatos.Add(new Contato
-                {
-                    Nome = cont.DisplayName,
-                    Numero = cont.Phones.FirstOrDefault()?.Number,
-                    //Thumbnail = cont.GetThumbnail().ToArray<byte>()
-                });
+				Contato contato = new Contato
+				{
+					Nome = cont.DisplayName,
+					Numero = cont.Phones.FirstOrDefault()?.Number,
+					//Thumbnail = stream.ToArray() != null ? stream.ToArray() : null
+				};
+
+				var stream = new MemoryStream();
+				cont.GetThumbnail().Compress(Bitmap.CompressFormat.Png, 0, stream);
+
+
+				//if(stream != null) {
+				//	contato.Thumbnail = stream.ToArray();
+				//}
+
+				contatos.Add(contato);
             }
 
             MessagingCenter.Send<IContatoHelper, List<Contato>>(this, "obtercontatos", contatos);
