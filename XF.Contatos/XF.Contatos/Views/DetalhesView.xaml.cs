@@ -39,5 +39,21 @@ namespace XF.Contatos.Views
 				Longitude = lblLongitude.Text
 			});
         }
+
+		private void altera_imagem(object sender, EventArgs e)
+        {
+            var photo = Plugin.Media.CrossMedia.Current.TakePhotoAsync(
+               new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+
+            if (photo != null)
+            {
+                foto.Source = ImageSource.FromStream(() =>
+                {
+                    return photo.Result.GetStream();
+                });
+            }
+
+
+        }
     }
 }

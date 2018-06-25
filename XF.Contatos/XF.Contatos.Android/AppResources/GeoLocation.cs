@@ -37,7 +37,6 @@ namespace XF.Contatos.Droid
                 Longitude = paramLongitude.ToString()
             };
 
-            // Enviar coordenada via MessagingCenter
             MessagingCenter.Send<ILocalizacao, Coordenada>(this, "coordenada", coordenada);
         }
     }

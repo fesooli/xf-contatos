@@ -18,6 +18,9 @@ namespace XF.Contatos.Views
 		public ContatosView ()
 		{
 			InitializeComponent ();
+			//var contatoHelper = DependencyService.Get<IContatoHelper>();
+
+			//contatoHelper.GetContatoListAsync();
             loadContatos();
         }
 
@@ -27,7 +30,7 @@ namespace XF.Contatos.Views
             var result = await contatoHelper.GetContatoListAsync();
 
             if (!result)
-                await DisplayAlert("Oops!", "Você precisa conceder acessos ao seu celular p/ o app!", "Ok");                
+                await DisplayAlert("", "Permissões não carregadas, reabra o APP!", "Ok");                
         }
 
         void OnContatoTapped(object sender, ItemTappedEventArgs e) => 

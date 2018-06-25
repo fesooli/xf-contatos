@@ -2,15 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.XF.Contatos.Android PreferredExecutionTarget="Android.ce01171182d0a12802" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
   <MonoDevelop.Ide.Workbench ActiveDocument="XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs">
     <Files>
-      <File FileName="XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" Line="97" Column="6" />
+      <File FileName="XF.Contatos/XF.Contatos/ViewModels/ContatoViewModel.cs" Line="25" Column="100" />
+      <File FileName="XF.Contatos/XF.Contatos/Views/ContatosView.xaml.cs" Line="22" Column="4" />
+      <File FileName="XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" Line="50" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/fellipe.soares/Documents/FiapXamarin/Fiap.XF.Contatos/XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" relfile="XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" line="97" column="6" />
-      <Breakpoint file="/Users/fellipe.soares/Documents/FiapXamarin/Fiap.XF.Contatos/XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" relfile="XF.Contatos/XF.Contatos.Android/AppResources/ContatoHelper.cs" line="93" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

@@ -4,12 +4,13 @@
              x:Class="XF.Contatos.Views.DetalhesView">
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="imgContato" ></Image>
+            <Image x:Name="foto" WidthRequest="200" HeightRequest="100"></Image>
+            <Button x:Name="btnCamera" Text="Alterar Imagem" Clicked="altera_imagem" />
             <StackLayout Padding="5">
-            <Button x:Name="btnCoordenada" Text="Ver no Mapa" Clicked="btnVerNoMapa_Clicked"/>
-            <Label x:Name="lblLatitude" />
-            <Label x:Name="lblLongitude" />
-        </StackLayout>
+                <Button x:Name="btnCoordenada" Text="Ver no Mapa" Clicked="btnVerNoMapa_Clicked"/>
+                <Label x:Name="lblLatitude" />
+                <Label x:Name="lblLongitude" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -29,18 +29,23 @@ namespace XF.Contatos.Droid.AppResources
 
             var contactsPermission = Manifest.Permission.ReadContacts;
 			var phonePermission = Manifest.Permission.CallPhone;
-			string[] permissions = { contactsPermission, phonePermission };
+			var mapsPermission = Manifest.Permission.AccessFineLocation;
+			var coarsePermission = Manifest.Permission.AccessCoarseLocation;
+			var cameraPermission = Manifest.Permission.Camera;
+			var storagePermission = Manifest.Permission.WriteExternalStorage;
+			string[] permissions = { contactsPermission, phonePermission, mapsPermission, coarsePermission, cameraPermission, storagePermission };
             
-			if (context.CheckSelfPermission(phonePermission) != (int)Permission.Granted)
+			if ((context.CheckSelfPermission(contactsPermission) != (int)Permission.Granted) ||
+			    (context.CheckSelfPermission(phonePermission) != (int)Permission.Granted) ||
+			    (context.CheckSelfPermission(mapsPermission) != (int)Permission.Granted) ||
+			    (context.CheckSelfPermission(coarsePermission) != (int)Permission.Granted) ||
+			    (context.CheckSelfPermission(cameraPermission) != (int)Permission.Granted) ||
+			    (context.CheckSelfPermission(storagePermission) != (int)Permission.Granted))
             {
                 context.RequestPermissions(permissions, idRequestCode);
+				Task.Delay(10000).Wait();
             }
-
-            if (context.CheckSelfPermission(contactsPermission) != (int) Permission.Granted)
-            {
-                context.RequestPermissions(permissions, idRequestCode);
-            }
-
+   
             var book = new AddressBook(context);
             if (!await book.RequestPermission())
             {

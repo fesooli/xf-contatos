@@ -22,7 +22,7 @@ namespace XF.Contatos.ViewModels
         public async void Discar(Contato contato)
         {
            var result = await App.Current.MainPage.
-                DisplayAlert("Ligando...", $"Deseja ligar para o número {contato.Numero} ?", "Discar", "Cancelar");
+                DisplayAlert("Ligando...", $"Deseja ligar para o número {contato.Numero} ?", "Ligar", "Cancelar");
 
             if (result)
             {
