@@ -10,7 +10,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <ToolbarItem Text="Detalhes" Clicked="detalhes_Clicked"/>
+                            <ToolbarItem Text="Detalhes" Clicked="detalhes_Clicked" x:Name="toolbar"/>
                         </ViewCell.ContextActions>
                         <StackLayout>
                             <Label Text="{Binding Nome}" />

@@ -91,18 +91,17 @@ namespace XF.Contatos.Droid.AppResources
 				Contato contato = new Contato
 				{
 					Nome = cont.DisplayName,
-					Numero = cont.Phones.FirstOrDefault()?.Number,
-					//Thumbnail = stream.ToArray() != null ? stream.ToArray() : null
+					Numero = cont.Phones.FirstOrDefault()?.Number
 				};
 
-				var stream = new MemoryStream();
-				cont.GetThumbnail().Compress(Bitmap.CompressFormat.Png, 0, stream);
+				var image = cont.GetThumbnail();
 
-
-				//if(stream != null) {
-				//	contato.Thumbnail = stream.ToArray();
-				//}
-
+				if(image != null) {
+					var stream = new MemoryStream();
+                    image.Compress(Bitmap.CompressFormat.Png, 80, stream);
+					contato.Thumbnail = stream.ToArray();
+				}
+                           
 				contatos.Add(contato);
             }
 

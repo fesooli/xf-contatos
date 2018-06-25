@@ -33,7 +33,7 @@ namespace XF.Contatos.Views
         void OnContatoTapped(object sender, ItemTappedEventArgs e) => 
             ((ContatoViewModel)BindingContext).Discar((Contato)e.Item);
 
-		private async void detalhes_Clicked(object sender, EventArgs e)
+		private async void detalhes_Clicked(object sender, ItemTappedEventArgs e)
         {
 			await Navigation.PushAsync(new DetalhesView());
         }

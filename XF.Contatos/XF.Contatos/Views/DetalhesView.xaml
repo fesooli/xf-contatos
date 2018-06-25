@@ -4,9 +4,7 @@
              x:Class="XF.Contatos.Views.DetalhesView">
     <ContentPage.Content>
         <StackLayout>
-            <Image>
-                
-            </Image>
+            <Image x:Name="imgContato" ></Image>
             <StackLayout Padding="5">
             <Button x:Name="btnCoordenada" Text="Ver no Mapa" Clicked="btnVerNoMapa_Clicked"/>
             <Label x:Name="lblLatitude" />
